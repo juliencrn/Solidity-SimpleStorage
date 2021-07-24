@@ -45,23 +45,28 @@ export default function App() {
     if (!web3State.contract) {
       throw new Error("Contract missing")
     }
-
     // Get the value from the contract
     const response = await web3State.contract.methods.get().call();
 
     setStorageValue(response)
   }
 
+  // Update state when the stored values changes
+  useEffect(() => {
+    if (web3State.contract) {
+      web3State.contract.events.StoredDataChange({}, (err, event) => {
+        if (err) return
+        setStorageValue(Number(event.returnValues.newValue));
+      })
+    }
+  }, [web3State.contract])
+
   const setContractValue = async () => {
     if (!web3State.contract || !web3State.accounts[0]) {
       throw new Error("contract or account missing")
     }
-
     // Stores a given value
     await web3State.contract.methods.set(inputValue).send({ from: web3State.accounts[0] });
-
-    // Get the value from the contract to prove it worked.
-    getContractValue()
   }
 
   const handleSubmit = (e) => {
