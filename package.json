@@ -1,0 +1,29 @@
+{
+  "name": "solidity-simple-storage",
+  "version": "1.0.0",
+  "description": "![Screenshot](Screenshot.gif)",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "truffle-assertions": "^0.9.2",
+    "web3": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliencrn/Solidity-SimpleStorage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliencrn/Solidity-SimpleStorage/issues"
+  },
+  "homepage": "https://github.com/juliencrn/Solidity-SimpleStorage#readme"
+}

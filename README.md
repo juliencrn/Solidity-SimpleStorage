@@ -13,6 +13,7 @@ truffle develop
 > compile
 > test
 > migrate --reset
+> test
 ```
 
 And with a second terminal, open the client (dapp front-end).
@@ -20,5 +21,6 @@ And with a second terminal, open the client (dapp front-end).
 ```
 cd client
 npm install
+npm test
 npm start
 ```

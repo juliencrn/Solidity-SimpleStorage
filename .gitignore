@@ -41,6 +41,7 @@ coverage
 # production
 build
 build_webpack
+client/src/contracts
 
 # misc
 .env
